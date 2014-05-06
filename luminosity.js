@@ -6,9 +6,6 @@
 //process.argv[3] --> refers to green
 //process.argv[4] --> refers to blue
 
-// process.argv[2];
-// process.argv[3];
-// process.argv[4] = blue;
 
 var r = process.argv[2];
 var g = process.argv[3];
@@ -16,8 +13,13 @@ var b = process.argv[4];
 
 
 var luminosity = function (red, green, blue){	
-	return (0.2126*red + 0.7152*green + 0.0722*blue);
+	console.log(0.2126*red + 0.7152*green + 0.0722*blue);
 };
 
-// console.log( luminosity(r,g,b) );
-return luminosity(r,g,b);
+luminosity(r,g,b);
+
+//in CLI type 
+	//node luminosity.js 255 239 213
+		//logs 240.52439999999999
+	//node luminosity.js 50 15 25
+		//logs 23.163
